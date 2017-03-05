@@ -1,0 +1,70 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.lovalive.lottery"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.lovalive.lottery"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.lovalive.lottery"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.lovalive.lottery"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "com.lovalive.lottery"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.lovalive.lottery"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "com.lovalive.lottery"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.lovalive.lottery"
+        },
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "com.lovalive.lottery"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "com.lovalive.lottery"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.lovalive.lottery"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.lovalive.lottery"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.lovalive.lottery"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "com.lovalive.lottery"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.lovalive.lottery"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.lovalive.lottery"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.lovalive.lottery"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.lovalive.lottery"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.lovalive.lottery"
+        }
+    }
+}
