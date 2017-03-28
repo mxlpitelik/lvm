@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0cee6ee0-b003-4969-8ade-8b024a59baba" name="Default" comment="ready">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/browser/www/res/icon/android/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/res/icon/android/logo.png" afterPath="" />
+    <list default="true" id="0cee6ee0-b003-4969-8ade-8b024a59baba" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/browser/www/index.html" afterPath="$PROJECT_DIR$/platforms/browser/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
     </list>
     <ignored path="LOVA.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -283,12 +278,20 @@
       <option name="presentableId" value="Default" />
       <updated>1488670807424</updated>
       <workItem from="1488670809002" duration="2879000" />
-      <workItem from="1490710568483" duration="3859000" />
+      <workItem from="1490710568483" duration="3895000" />
     </task>
+    <task id="LOCAL-00001" summary="1.0.1">
+      <created>1490714694018</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1490714694018</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6738000" />
+    <option name="totallyTimeSpent" value="6774000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1932" height="1047" extended-state="0" />
@@ -333,7 +336,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ready" />
-    <option name="LAST_COMMIT_MESSAGE" value="ready" />
+    <MESSAGE value="1.0.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.0.1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
