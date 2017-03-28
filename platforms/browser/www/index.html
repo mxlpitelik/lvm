@@ -48,58 +48,85 @@
 
     <link rel="stylesheet" href="vendor/bootstrap.min.css" />
     <script src="vendor/bootstrap.min.js" type="text/javascript"></script>
+    <style>
+        body {
+            -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+            -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+            -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+            background-color:#E4E4E4;
+            background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+            background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+            background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+            background-image:-webkit-gradient(
+                    linear,
+                    left top,
+                    left bottom,
+                    color-stop(0, #A7A7A7),
+                    color-stop(0.51, #E4E4E4)
+            );
+            background-attachment:fixed;
+            font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+            font-size:12px;
+            height:100%;
+            margin:0px;
+            padding:0px;
+            /* text-transform:uppercase; */
+            width:100%;
+        }
+
+        /* Portrait layout (default) */
+        .app {
+            background:url(img/logo.png) no-repeat center top; /* 170px x 200px */
+            background-size: 80px;
+            position:absolute;             /* position in the center of the screen */
+            left:50%;
+            top:50%;
+            height:50px;                   /* text area height */
+            width:225px;                   /* text area width */
+            text-align:center;
+            padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+            margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+            /* offset horizontal: half of text area width */
+        }
+        *.fullscreen{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            margin: 0px;
+            padding: 0px;
+            border: none;
+        }
+        #no_internet{
+            display: none;
+            color: red;
+        }
+    </style>
 </head>
 
 <body>
     <div class="app">
-        <div class="row">
-            <div class="col-xs-12 text-center">
-                <br><br><br><br>
-                <img id="logo_login" src="img/logo.png" style="height: 80px;">
-                <br><br>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-md-4 col-md-offset-4 text-center">
-                <form action="/" method="post" class="form-horizontal">
-                    <input type="hidden" name="action" value="login">
-                    <div class="text-center alert-danger" style="padding: 5px; margin-bottom: 10px;display: none;"></div>
-                    <div class="form-group">
-                        <label for="email" class="col-xs-offset-1 col-xs-3 control-label">E-mail</label>
-                        <div class="col-xs-6">
-                            <input type="email" class="form-control" id="email" name="email" required="required">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="password" class="col-xs-offset-1 col-xs-3 control-label">Пароль</label>
-                        <div class="col-xs-6">
-                            <input type="password" class="form-control" id="password" name="password" required="required" pattern=".{6,}">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-xs-offset-4 col-xs-3">
-                            <button type="submit" class="btn btn-default" style="padding-left: 20px; padding-right: 20px;">Войти</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <br><hr><br>
-
-        <div class="col-xs-12 text-center">
-            <a href="http://lova.live#forgotpassword" target="_blank">Забыли пароль?</a>
-        </div>
-        <br><br>
-        <div class="col-xs-12 text-center">
-            <a href="http://lova.live#register" target="_blank">Зарегистрироваться</a>
-        </div>
-
-
+        <div id="loading">загрузка...</div>
+        <div id="no_internet">нет соединения с сервером</div>
     </div>
+
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
         app.initialize();
+        $.get({
+            url: 'https://lova.live',
+            success: function(){
+                $('body').append('<iframe class="fullscreen" src="https://lova.live" id="lovasite"></iframe>');
+            },
+            error: function(){
+                $('#loading').hide();
+                $('#no_internet').show();
+            }
+        })
     </script>
 </body>
 
